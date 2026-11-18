@@ -12,4 +12,28 @@
 .coming-soon:hover .original-label,.coming-soon:focus .original-label{visibility:hidden}
 .coming-soon:hover .coming-soon-label,.coming-soon:focus .coming-soon-label{display:flex}
 .coming-soon:active{transform:translate(-2px,-3px) rotate(-.4deg);box-shadow:7px 9px 0 var(--ink),inset 0 4px 0 #fff1ad}
-@media(hover:none){.coming-soon .original-label{visibility:hidden}.coming-soon .coming-soon-label{display:flex}}
+@media(hover:none){
+.coming-soon{flex-direction:column;gap:8px}
+.coming-soon .original-label,.coming-soon:hover .original-label,.coming-soon:focus .original-label{visibility:visible}
+.coming-soon .coming-soon-label{display:block;position:static;inset:auto;font-size:14px;line-height:1.2}
+}
+
+/* Homepage groups */
+.lab-section{margin:30px auto 0}
+.section-heading{margin:0 0 18px;font-family:Cooper Black,Georgia,serif;font-size:clamp(27px,5vw,36px);font-weight:bold;line-height:1.2;text-shadow:2px 3px 0 var(--ink)}
+
+/* Local fonts keep the new labels consistent on every device. */
+@font-face{font-family:'Shrikhand';src:url('assets/Shrikhand-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+.new-unit-label{font-family:'Shrikhand',Georgia,serif;font-weight:400;font-size:clamp(21px,4.5vw,31px);line-height:1.25}
+@font-face{font-family:'Redstring X-Files';src:url('assets/redstring-x-files.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+.redstring-logo{display:block;font-family:'Redstring X-Files',Georgia,serif;font-weight:400;font-size:34px;letter-spacing:0;line-height:1;color:#b32025;text-transform:lowercase}
+
+
+/* Smaller cheese-shaped bubbles identify the homepage sections. */
+.section-heading{position:relative;display:table;max-width:100%;margin:0 auto 18px;padding:10px 30px;border:2px solid var(--yellow);border-radius:22px;background:var(--ink);color:var(--yellow);font-family:'Shrikhand',Georgia,serif;font-size:clamp(20px,3.8vw,25px);font-weight:400;line-height:1.2;text-shadow:none;box-shadow:3px 4px 0 #102b60,inset 0 2px 0 #39392f}
+.section-heading:before,.section-heading:after{content:'';position:absolute;width:7px;height:4px;border-radius:50%;background:var(--yellow);left:12px;top:13px;transform:rotate(-24deg)}
+.section-heading:after{left:auto;right:11px;top:auto;bottom:11px;width:5px}
+
+.site-credit{margin:36px auto 0;color:#fff;font-family:Lexend,Arial,sans-serif;font-size:12px;font-weight:400;line-height:1.5;letter-spacing:0;text-transform:none}
+
+.coming-soon-label{font-family:"Courier New",Courier,monospace;font-weight:700}
